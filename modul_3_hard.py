@@ -14,7 +14,7 @@ def calculate_date(*args):
         if isinstance(arg, (list, tuple, set)):
             total_sum += calculate_date(*arg)
         elif isinstance(arg, dict):
-            total_sum += calculate_date(arg.items)
+            total_sum += calculate_date(*arg.items())
         elif isinstance(arg, str):
             total_sum += len(arg)
         elif isinstance(arg, (int, float)):
